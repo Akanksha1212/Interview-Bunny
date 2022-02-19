@@ -90,60 +90,70 @@ class Home extends StatelessWidget {
                           Container(
                             height: 200,
                             width: MediaQuery.of(context).size.width / 2.4,
-                            child: Card(
-                              color: Color.fromARGB(255, 255, 230, 230),
-                              elevation: 3,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                    "assets/video-call.png",
-                                    height: 80,
-                                    width: 80,
-                                  ),
-                                  const SizedBox(
-                                    height: 8,
-                                  ),
-                                  Text(
-                                    "Practice",
-                                    style: GoogleFonts.comfortaa(
-                                      textStyle: const TextStyle(
-                                          color:
-                                              Color.fromARGB(255, 47, 47, 47),
-                                          fontSize: 15),
+                            child: GestureDetector(
+                              child: Card(
+                                color: Color.fromARGB(255, 255, 230, 230),
+                                elevation: 3,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      "assets/video-call.png",
+                                      height: 80,
+                                      width: 80,
                                     ),
-                                  ),
-                                ],
+                                    const SizedBox(
+                                      height: 8,
+                                    ),
+                                    Text(
+                                      "Practice",
+                                      style: GoogleFonts.comfortaa(
+                                        textStyle: const TextStyle(
+                                            color:
+                                                Color.fromARGB(255, 47, 47, 47),
+                                            fontSize: 15),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
+                              onTap: () {
+                                Navigator.pushNamed(context, "/practice");
+                              },
                             ),
                           ),
                           Container(
                             height: 200,
                             width: MediaQuery.of(context).size.width / 2.4,
-                            child: Card(
-                              elevation: 3,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                    "assets/office-building.png",
-                                    height: 80,
-                                    width: 80,
-                                  ),
-                                  const SizedBox(
-                                    height: 8,
-                                  ),
-                                  Text(
-                                    "Company Info",
-                                    style: GoogleFonts.comfortaa(
-                                      textStyle: const TextStyle(
-                                          color: const Color.fromARGB(
-                                              255, 47, 47, 47),
-                                          fontSize: 15),
+                            child: GestureDetector(
+                              child: Card(
+                                elevation: 3,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      "assets/office-building.png",
+                                      height: 80,
+                                      width: 80,
                                     ),
-                                  ),
-                                ],
+                                    const SizedBox(
+                                      height: 8,
+                                    ),
+                                    Text(
+                                      "Company Info",
+                                      style: GoogleFonts.comfortaa(
+                                        textStyle: const TextStyle(
+                                            color: const Color.fromARGB(
+                                                255, 47, 47, 47),
+                                            fontSize: 15),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
+                              onTap: () {
+                                Navigator.pushNamed(context, "/company");
+                              },
                             ),
                           )
                         ],
@@ -154,60 +164,70 @@ class Home extends StatelessWidget {
                           Container(
                             height: 200,
                             width: MediaQuery.of(context).size.width / 2.4,
-                            child: Card(
-                              elevation: 3,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                    "assets/targ.png",
-                                    height: 80,
-                                    width: 80,
-                                  ),
-                                  const SizedBox(
-                                    height: 8,
-                                  ),
-                                  Text(
-                                    "Get feedback",
-                                    style: GoogleFonts.comfortaa(
-                                      textStyle: const TextStyle(
-                                          color:
-                                              Color.fromARGB(255, 47, 47, 47),
-                                          fontSize: 15),
+                            child: GestureDetector(
+                              child: Card(
+                                elevation: 3,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      "assets/targ.png",
+                                      height: 80,
+                                      width: 80,
                                     ),
-                                  ),
-                                ],
+                                    const SizedBox(
+                                      height: 8,
+                                    ),
+                                    Text(
+                                      "Get feedback",
+                                      style: GoogleFonts.comfortaa(
+                                        textStyle: const TextStyle(
+                                            color:
+                                                Color.fromARGB(255, 47, 47, 47),
+                                            fontSize: 15),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
+                              onTap: () {
+                                Navigator.pushNamed(context, "/feedback");
+                              },
                             ),
                           ),
                           Container(
                             height: 200,
                             width: MediaQuery.of(context).size.width / 2.4,
-                            child: Card(
-                              color: Color.fromARGB(255, 255, 230, 230),
-                              elevation: 3,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                    "assets/cv.png",
-                                    height: 80,
-                                    width: 80,
-                                  ),
-                                  const SizedBox(
-                                    height: 8,
-                                  ),
-                                  Text(
-                                    "Resume Review",
-                                    style: GoogleFonts.comfortaa(
-                                      textStyle: const TextStyle(
-                                          color: const Color.fromARGB(
-                                              255, 47, 47, 47),
-                                          fontSize: 15),
+                            child: GestureDetector(
+                              child: Card(
+                                color: Color.fromARGB(255, 255, 230, 230),
+                                elevation: 3,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      "assets/cv.png",
+                                      height: 80,
+                                      width: 80,
                                     ),
-                                  ),
-                                ],
+                                    const SizedBox(
+                                      height: 8,
+                                    ),
+                                    Text(
+                                      "Resume Review",
+                                      style: GoogleFonts.comfortaa(
+                                        textStyle: const TextStyle(
+                                            color: const Color.fromARGB(
+                                                255, 47, 47, 47),
+                                            fontSize: 15),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
+                              onTap: () {
+                                Navigator.pushNamed(context, "/resume");
+                              },
                             ),
                           )
                         ],
@@ -215,27 +235,32 @@ class Home extends StatelessWidget {
                       Container(
                         height: 160,
                         width: MediaQuery.of(context).size.width / 1.19,
-                        child: Card(
-                          elevation: 3,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "About Interview Bunny",
-                                style: GoogleFonts.comfortaa(
-                                  textStyle: const TextStyle(
-                                      color:
-                                          const Color.fromARGB(255, 47, 47, 47),
-                                      fontSize: 15),
+                        child: GestureDetector(
+                          child: Card(
+                            elevation: 3,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "About Interview Bunny",
+                                  style: GoogleFonts.comfortaa(
+                                    textStyle: const TextStyle(
+                                        color: const Color.fromARGB(
+                                            255, 47, 47, 47),
+                                        fontSize: 15),
+                                  ),
                                 ),
-                              ),
-                              Image.asset(
-                                "assets/bunny.png",
-                                height: 80,
-                                width: 80,
-                              ),
-                            ],
+                                Image.asset(
+                                  "assets/bunny.png",
+                                  height: 80,
+                                  width: 80,
+                                ),
+                              ],
+                            ),
                           ),
+                          onTap: () {
+                            Navigator.pushNamed(context, "/about");
+                          },
                         ),
                       )
                     ],

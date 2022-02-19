@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:interview_bunny/screens/camera_page.dart';
 import 'package:interview_bunny/screens/home.dart';
 import 'package:interview_bunny/screens/onboarding.dart';
+import 'package:interview_bunny/screens/practice.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -16,6 +17,14 @@ void main() {
           return MaterialPageRoute(builder: (context) => OnBoardingPage());
         case '/video':
           return MaterialPageRoute(builder: (context) => CameraPage());
+        case '/practice':
+          return MaterialPageRoute(builder: (context) => Practice());
+        case '/company':
+          return MaterialPageRoute(builder: (context) => Practice());
+        case '/resume':
+          return MaterialPageRoute(builder: (context) => Practice());
+        case '/about':
+          return MaterialPageRoute(builder: (context) => Practice());
       }
     },
     debugShowCheckedModeBanner: false,
