@@ -11,23 +11,25 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-        onTap: () {
-          Navigator.pushNamed(context, nextPath);
-        },
-        child: Container(
-            width: 266,
-            height: 60,
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              color: Color(0xffFFCBCB),
-              borderRadius: BorderRadius.circular(30),
-            ),
-            child: Text(
-              name,
-              style: GoogleFonts.bowlbyOne(
-                textStyle: TextStyle(color: Colors.white, fontSize: 25),
-              ),
-            )));
+      onTap: () {
+        Navigator.pushNamed(context, nextPath);
+      },
+      child: Container(
+        width: 266,
+        height: 60,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: Color(0xffFFCBCB),
+          borderRadius: BorderRadius.circular(30),
+        ),
+        child: Text(
+          name,
+          style: GoogleFonts.bowlbyOne(
+            textStyle: TextStyle(color: Colors.white, fontSize: 25),
+          ),
+        ),
+      ),
+    );
     // Bowlby One
   }
 }

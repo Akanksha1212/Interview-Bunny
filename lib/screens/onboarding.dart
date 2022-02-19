@@ -94,7 +94,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                                 "ace all your interviews with interview bunny",
                             image: _buildImage('target.jpg'),
                             footer:
-                                CustomButton(name: "Start", nextPath: "/video"),
+                                CustomButton(name: "Start", nextPath: "/home"),
                             decoration: pageDecoration,
                           ),
                         ],
