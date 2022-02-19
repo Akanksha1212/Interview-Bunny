@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:interview_bunny/screens/camera_page.dart';
 import 'package:interview_bunny/screens/home.dart';
 import 'package:interview_bunny/screens/onboarding.dart';
 
@@ -10,9 +11,11 @@ void main() {
         case '/':
           return MaterialPageRoute(builder: (context) => MyApp());
         case '/home':
-          return MaterialPageRoute(builder: (context) => Home());
+          return MaterialPageRoute(builder: (context) => const Home());
         case '/onboarding':
           return MaterialPageRoute(builder: (context) => OnBoardingPage());
+        case '/video':
+          return MaterialPageRoute(builder: (context) => CameraPage());
       }
     },
     debugShowCheckedModeBanner: false,
@@ -47,12 +50,12 @@ class _MyAppState extends State<MyApp> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+          children: const [
             // Image(
             //   image: AssetImage("assets/"),
             // ),
             Image(
-              image: AssetImage("assets/IB_Logo.png"),
+              image: AssetImage("assets/IBLogo.png"),
               width: 400,
               height: 400,
             ),

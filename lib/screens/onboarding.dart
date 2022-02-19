@@ -47,7 +47,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
     );
 
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 232, 255, 250),
+      backgroundColor: Color(0xffD9D7F1),
       body: Center(
         child: Container(
           height: 690,
@@ -94,7 +94,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                                 "ace all your interviews with interview bunny",
                             image: _buildImage('target.jpg'),
                             footer:
-                                CustomButton(name: "Start", nextPath: "/home"),
+                                CustomButton(name: "Start", nextPath: "/video"),
                             decoration: pageDecoration,
                           ),
                         ],
