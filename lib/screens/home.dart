@@ -7,17 +7,17 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffD9D7F1),
+      backgroundColor: const Color(0xffD9D7F1),
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Text(
               "Home",
               style: GoogleFonts.montserrat(
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                     color: Color.fromARGB(255, 47, 47, 47), fontSize: 24),
               ),
             ),
@@ -31,48 +31,94 @@ class Home extends StatelessWidget {
                       color: Colors.white,
                     ),
                     color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20),
-                      topRight: Radius.circular(20),
+                    borderRadius: const BorderRadius.only(
+                      topLeft: const Radius.circular(20),
+                      topRight: const Radius.circular(20),
                     ),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     // mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SizedBox(
-                        height: 20,
+                      const SizedBox(
+                        height: 15,
                       ),
-                      Text(
-                        "Welcome Akanksha",
-                        style: GoogleFonts.montserrat(
-                          textStyle: TextStyle(
-                              color: Color.fromARGB(255, 47, 47, 47),
-                              fontSize: 20),
+                      Container(
+                        height: 160,
+                        width: MediaQuery.of(context).size.width / 1.19,
+                        child: Card(
+                          elevation: 3,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "Welcome Akanksha!",
+                                    style: GoogleFonts.comfortaa(
+                                      textStyle: const TextStyle(
+                                          color:
+                                              Color.fromARGB(255, 47, 47, 47),
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w800),
+                                    ),
+                                  ),
+                                  Text(
+                                    "Are you ready to ace all \nyour interviews?",
+                                    style: GoogleFonts.comfortaa(
+                                      textStyle: const TextStyle(
+                                        color: Color.fromARGB(255, 47, 47, 47),
+                                        fontSize: 13,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Image.asset(
+                                "assets/bun.gif",
+                                height: 80,
+                                width: 80,
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Container(
-                            height: 250,
+                            height: 200,
                             width: MediaQuery.of(context).size.width / 2.4,
                             child: Card(
+                              color: Color.fromARGB(255, 255, 230, 230),
                               elevation: 3,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Image.asset(
                                     "assets/video-call.png",
-                                    height: 100,
-                                    width: 100,
+                                    height: 80,
+                                    width: 80,
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  Text(
+                                    "Practice",
+                                    style: GoogleFonts.comfortaa(
+                                      textStyle: const TextStyle(
+                                          color:
+                                              Color.fromARGB(255, 47, 47, 47),
+                                          fontSize: 15),
+                                    ),
                                   ),
                                 ],
                               ),
                             ),
                           ),
                           Container(
-                            height: 250,
+                            height: 200,
                             width: MediaQuery.of(context).size.width / 2.4,
                             child: Card(
                               elevation: 3,
@@ -81,8 +127,20 @@ class Home extends StatelessWidget {
                                 children: [
                                   Image.asset(
                                     "assets/office-building.png",
-                                    height: 100,
-                                    width: 100,
+                                    height: 80,
+                                    width: 80,
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  Text(
+                                    "Company Info",
+                                    style: GoogleFonts.comfortaa(
+                                      textStyle: const TextStyle(
+                                          color: const Color.fromARGB(
+                                              255, 47, 47, 47),
+                                          fontSize: 15),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -94,7 +152,7 @@ class Home extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Container(
-                            height: 250,
+                            height: 200,
                             width: MediaQuery.of(context).size.width / 2.4,
                             child: Card(
                               elevation: 3,
@@ -103,25 +161,50 @@ class Home extends StatelessWidget {
                                 children: [
                                   Image.asset(
                                     "assets/targ.png",
-                                    height: 100,
-                                    width: 100,
+                                    height: 80,
+                                    width: 80,
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  Text(
+                                    "Get feedback",
+                                    style: GoogleFonts.comfortaa(
+                                      textStyle: const TextStyle(
+                                          color:
+                                              Color.fromARGB(255, 47, 47, 47),
+                                          fontSize: 15),
+                                    ),
                                   ),
                                 ],
                               ),
                             ),
                           ),
                           Container(
-                            height: 250,
+                            height: 200,
                             width: MediaQuery.of(context).size.width / 2.4,
                             child: Card(
+                              color: Color.fromARGB(255, 255, 230, 230),
                               elevation: 3,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Image.asset(
                                     "assets/cv.png",
-                                    height: 100,
-                                    width: 100,
+                                    height: 80,
+                                    width: 80,
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  Text(
+                                    "Resume Review",
+                                    style: GoogleFonts.comfortaa(
+                                      textStyle: const TextStyle(
+                                          color: const Color.fromARGB(
+                                              255, 47, 47, 47),
+                                          fontSize: 15),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -134,13 +217,22 @@ class Home extends StatelessWidget {
                         width: MediaQuery.of(context).size.width / 1.19,
                         child: Card(
                           elevation: 3,
-                          child: Column(
+                          child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
+                              Text(
+                                "About Interview Bunny",
+                                style: GoogleFonts.comfortaa(
+                                  textStyle: const TextStyle(
+                                      color:
+                                          const Color.fromARGB(255, 47, 47, 47),
+                                      fontSize: 15),
+                                ),
+                              ),
                               Image.asset(
-                                "assets/cv.png",
-                                height: 100,
-                                width: 100,
+                                "assets/bunny.png",
+                                height: 80,
+                                width: 80,
                               ),
                             ],
                           ),
