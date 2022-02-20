@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:interview_bunny/screens/camera_page.dart';
+import 'package:interview_bunny/screens/community.dart';
 import 'package:interview_bunny/screens/company_info.dart';
 import 'package:interview_bunny/screens/home.dart';
 import 'package:interview_bunny/screens/onboarding.dart';
@@ -38,6 +39,8 @@ Future<void> main() async {
           return MaterialPageRoute(builder: (context) => Practice());
         case '/result':
           return MaterialPageRoute(builder: (context) => Result());
+        case '/comments':
+          return MaterialPageRoute(builder: (context) => Comments());
       }
     },
     debugShowCheckedModeBanner: false,
@@ -78,8 +81,8 @@ class _MyAppState extends State<MyApp> {
             // ),
             Image(
               image: AssetImage("assets/IBLogo.png"),
-              width: 400,
-              height: 400,
+              width: 370,
+              height: 370,
             ),
           ],
         ),

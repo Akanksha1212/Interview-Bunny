@@ -72,26 +72,29 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                         pages: [
                           PageViewModel(
                             title: "",
-                            body: "Practice",
+                            body:
+                                "Practice answering different interview questions",
                             image: _buildImage('practice.jpg'),
                             decoration: pageDecoration,
                           ),
                           PageViewModel(
                             title: "",
-                            body: "Get feedback",
+                            body:
+                                "Get feedback from community members on your video answers",
                             image: _buildImage('feeback.jpg'),
                             decoration: pageDecoration,
                           ),
                           PageViewModel(
                             title: "",
-                            body: "collection of questions",
+                            body:
+                                "Huge collection of most frequently asked questions",
                             image: _buildImage('questions.jpg'),
                             decoration: pageDecoration,
                           ),
                           PageViewModel(
                             title: "",
                             body:
-                                "ace all your interviews with interview bunny",
+                                "Ace all your interviews with Interview Bunny",
                             image: _buildImage('target.jpg'),
                             footer:
                                 CustomButton(name: "Start", nextPath: "/home"),

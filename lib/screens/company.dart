@@ -56,35 +56,104 @@ class Company extends StatelessWidget {
                                   itemCount: 1,
                                   itemBuilder:
                                       (BuildContext context, int index) {
-                                    return GestureDetector(
-                                      child: Card(
-                                        child: ListTile(
-                                          leading: Image.network(
-                                            "${csvTable[text][1]}",
-                                            height: 150,
-                                            width: 150,
+                                    return Card(
+                                      child: Column(
+                                        children: [
+                                          ListTile(
+                                            // leading: Image.network(
+                                            //   "${csvTable[text][1]}",
+                                            //   height: 150,
+                                            //   width: 150,
+                                            // ),
+                                            title: Text(
+                                              '${csvTable[text][3]}',
+                                            ),
+                                            contentPadding:
+                                                const EdgeInsets.symmetric(
+                                                    horizontal: 25,
+                                                    vertical: 20),
+                                            subtitle: Text(''),
+                                            isThreeLine: true,
                                           ),
-                                          title: Text(
-                                            '${csvTable[text][0]}',
+                                          ListTile(
+                                            // leading: Image.network(
+                                            //   "${csvTable[text][1]}",
+                                            //   height: 150,
+                                            //   width: 150,
+                                            // ),
+                                            title: Text(
+                                              '${csvTable[text][4]}',
+                                            ),
+                                            contentPadding:
+                                                const EdgeInsets.symmetric(
+                                                    horizontal: 25,
+                                                    vertical: 20),
+                                            subtitle: Text(' '),
+                                            isThreeLine: true,
                                           ),
-                                          contentPadding:
-                                              const EdgeInsets.symmetric(
-                                                  horizontal: 25, vertical: 20),
-                                          subtitle:
-                                              Text(' ${csvTable[index][2]}'),
-                                          isThreeLine: true,
-                                        ),
-                                        color: const Color.fromARGB(
-                                            255, 255, 230, 230),
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                        ),
+                                          ListTile(
+                                            // leading: Image.network(
+                                            //   "${csvTable[text][1]}",
+                                            //   height: 150,
+                                            //   width: 150,
+                                            // ),
+                                            title: Text(
+                                              '${csvTable[text][5]}',
+                                            ),
+                                            contentPadding:
+                                                const EdgeInsets.symmetric(
+                                                    horizontal: 25,
+                                                    vertical: 20),
+                                            subtitle: Text(' '),
+                                            isThreeLine: true,
+                                          ),
+                                          ListTile(
+                                            // leading: Image.network(
+                                            //   "${csvTable[text][1]}",
+                                            //   height: 150,
+                                            //   width: 150,
+                                            // ),
+                                            title: Text(
+                                              '${csvTable[text][6]}',
+                                            ),
+                                            contentPadding:
+                                                const EdgeInsets.symmetric(
+                                                    horizontal: 25,
+                                                    vertical: 20),
+                                            subtitle: Text(' '),
+                                            isThreeLine: true,
+                                          ),
+                                          ListTile(
+                                            // leading: Image.network(
+                                            //   "${csvTable[text][1]}",
+                                            //   height: 150,
+                                            //   width: 150,
+                                            // ),
+                                            title: Text(
+                                              '${csvTable[text][7]}',
+                                            ),
+                                            contentPadding:
+                                                const EdgeInsets.symmetric(
+                                                    horizontal: 25,
+                                                    vertical: 20),
+                                            subtitle: Text(' '),
+                                            isThreeLine: true,
+                                          ),
+                                          Text(
+                                              "Find all questions and answers here"),
+                                          SizedBox(
+                                            height: 60,
+                                          )
+                                        ],
+                                      ),
+                                      color: const Color.fromARGB(
+                                          255, 255, 230, 230),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(10),
                                       ),
                                     );
                                   }),
                             ),
-                            
                           ],
                         ),
                       ),

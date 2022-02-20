@@ -194,19 +194,19 @@ class _ResultState extends State<Result> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                    Text(
-                                      "6.00",
+                                      "100wpm",
                                       style: GoogleFonts.comfortaa(
                                         textStyle: const TextStyle(
                                             color:
                                                 Color.fromARGB(255, 47, 47, 47),
-                                            fontSize: 40,fontWeight:FontWeight.w800),
+                                            fontSize: 35,fontWeight:FontWeight.w800),
                                       ),
                                     ),
                                     const SizedBox(
                                       height: 8,
                                     ),
                                     Text(
-                                      "Speaking to \nSilence Ratio",
+                                      "Words per minute",
                                       
                                       style: GoogleFonts.comfortaa(
                                         textStyle: const TextStyle(

@@ -1,3 +1,4 @@
+import 'package:comment_box/comment/comment.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -20,7 +21,7 @@ class _ResumeReviewState extends State<ResumeReview> {
               height: 20,
             ),
             Text(
-              "Comapany Specific Prep",
+              "Resume Review",
               style: GoogleFonts.montserrat(
                 textStyle: const TextStyle(
                     color: Color.fromARGB(255, 47, 47, 47), fontSize: 24),

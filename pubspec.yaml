@@ -45,6 +45,7 @@ dependencies:
   csv: ^5.0.1
   avatar_glow: ^2.0.2
   speech_to_text: ^5.4.3
+  comment_box: ^0.0.17
 
 dev_dependencies:
   flutter_test:
