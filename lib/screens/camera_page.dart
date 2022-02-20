@@ -1,3 +1,7 @@
+import 'dart:math';
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -30,7 +34,7 @@ class _CameraPageState extends State<CameraPage> {
   _initCamera() async {
     final cameras = await availableCameras();
     final front = cameras.firstWhere(
-        (camera) => camera.lensDirection == CameraLensDirection.front);
+        (camera) => camera.lensDirection == CameraLensDirection.back);
     _cameraController = CameraController(front, ResolutionPreset.max);
     await _cameraController.initialize();
     setState(() => _isLoading = false);
@@ -50,6 +54,22 @@ class _CameraPageState extends State<CameraPage> {
       await _cameraController.startVideoRecording();
       setState(() => _isRecording = true);
     }
+  }
+
+  var list = [
+    'What is your strength?',
+    'What is your one weakness?',
+    'Why do you want to join our company?',
+    'Introduce yourself',
+    'Where do you see yourself in 5 years?'
+  ];
+  var ques = "";
+  void NewQuestion() {
+    final _random = new Random();
+    var element = list[_random.nextInt(list.length)];
+    setState(() {
+      ques = element;
+    });
   }
 
   @override
@@ -82,13 +102,32 @@ class _CameraPageState extends State<CameraPage> {
                         color: Color(0xffD9D7F1),
                         child: Padding(
                           padding: const EdgeInsets.all(15.0),
-                          child: Text(
-                            'Question will appear here',
-                            style: GoogleFonts.montserrat(
-                              textStyle: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w500),
+                          child: Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Container(
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Flexible(
+                                    child: Text(ques,
+                                        style: GoogleFonts.montserrat(
+                                          textStyle: const TextStyle(
+                                              color: Color.fromARGB(
+                                                  255, 47, 47, 47),
+                                              fontSize: 20),
+                                        ),
+                                        maxLines: 6),
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  GestureDetector(
+                                    child: Icon(Icons.shuffle),
+                                    onTap: NewQuestion,
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),

@@ -118,7 +118,7 @@ class Home extends StatelessWidget {
                                 ),
                               ),
                               onTap: () {
-                                Navigator.pushNamed(context, "/practice");
+                                Navigator.pushNamed(context, "/edible");
                               },
                             ),
                           ),
@@ -191,7 +191,7 @@ class Home extends StatelessWidget {
                                 ),
                               ),
                               onTap: () {
-                                Navigator.pushNamed(context, "/feedback");
+                                Navigator.pushNamed(context, "/video");
                               },
                             ),
                           ),

@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:interview_bunny/screens/camera_page.dart';
+import 'package:interview_bunny/screens/company_info.dart';
 import 'package:interview_bunny/screens/home.dart';
 import 'package:interview_bunny/screens/onboarding.dart';
 import 'package:interview_bunny/screens/practice.dart';
+import 'package:interview_bunny/screens/ques.dart';
+import 'package:interview_bunny/screens/resume.dart';
 
 import 'package:permission_handler/permission_handler.dart';
 import 'package:teachable/teachable.dart';
@@ -27,9 +30,9 @@ Future<void> main() async {
         case '/practice':
           return MaterialPageRoute(builder: (context) => Practice());
         case '/company':
-          return MaterialPageRoute(builder: (context) => Practice());
+          return MaterialPageRoute(builder: (context) => CompanyInfo());
         case '/resume':
-          return MaterialPageRoute(builder: (context) => Practice());
+          return MaterialPageRoute(builder: (context) => ResumeReview());
         case '/about':
           return MaterialPageRoute(builder: (context) => Practice());
       }
