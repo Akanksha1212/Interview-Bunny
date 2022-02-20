@@ -37,7 +37,7 @@ class _CompanyInfoState extends State<CompanyInfo> {
                     height: 20,
                   ),
                   Text(
-                    "Comapany Specific Prep",
+                    "Comapanies",
                     style: GoogleFonts.montserrat(
                       textStyle: const TextStyle(
                           color: Color.fromARGB(255, 47, 47, 47), fontSize: 24),

@@ -5,6 +5,7 @@ import 'package:interview_bunny/screens/home.dart';
 import 'package:interview_bunny/screens/onboarding.dart';
 import 'package:interview_bunny/screens/practice.dart';
 import 'package:interview_bunny/screens/ques.dart';
+import 'package:interview_bunny/screens/result.dart';
 import 'package:interview_bunny/screens/resume.dart';
 
 import 'package:permission_handler/permission_handler.dart';
@@ -35,6 +36,8 @@ Future<void> main() async {
           return MaterialPageRoute(builder: (context) => ResumeReview());
         case '/about':
           return MaterialPageRoute(builder: (context) => Practice());
+        case '/result':
+          return MaterialPageRoute(builder: (context) => Result());
       }
     },
     debugShowCheckedModeBanner: false,

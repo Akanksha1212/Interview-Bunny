@@ -10,6 +10,8 @@ class Company extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool _expanded = false;
+    var _test = "Full Screen";
     return FutureBuilder<String>(
         future: rootBundle.loadString('assets/Companies.csv'), //
         builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
@@ -82,6 +84,7 @@ class Company extends StatelessWidget {
                                     );
                                   }),
                             ),
+                            
                           ],
                         ),
                       ),
@@ -92,5 +95,53 @@ class Company extends StatelessWidget {
             ),
           );
         });
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() {
+    return _MyHomePageState();
+  }
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  bool _expanded = false;
+  var _test = "Full Screen";
+  @override
+  Widget build(BuildContext context) {
+    return Column(children: [
+      Container(
+        height: 200,
+        margin: EdgeInsets.all(10),
+        color: Colors.green,
+        child: ExpansionPanelList(
+          animationDuration: Duration(milliseconds: 2000),
+          children: [
+            ExpansionPanel(
+              headerBuilder: (context, isExpanded) {
+                return ListTile(
+                  title: Text(
+                    'Click To Expand',
+                    style: TextStyle(color: Colors.black),
+                  ),
+                );
+              },
+              body: ListTile(
+                title: Text('Description text',
+                    style: TextStyle(color: Colors.black)),
+              ),
+              isExpanded: _expanded,
+              canTapOnHeader: true,
+            ),
+          ],
+          dividerColor: Colors.grey,
+          expansionCallback: (panelIndex, isExpanded) {
+            _expanded = !_expanded;
+            setState(() {});
+          },
+        ),
+      ),
+    ]);
   }
 }

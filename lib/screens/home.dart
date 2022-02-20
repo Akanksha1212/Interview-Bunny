@@ -118,7 +118,7 @@ class Home extends StatelessWidget {
                                 ),
                               ),
                               onTap: () {
-                                Navigator.pushNamed(context, "/edible");
+                                Navigator.pushNamed(context, "/practice");
                               },
                             ),
                           ),

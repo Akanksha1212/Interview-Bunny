@@ -43,6 +43,8 @@ dependencies:
   record_mp3: ^3.0.0
   audioplayers: ^0.20.1
   csv: ^5.0.1
+  avatar_glow: ^2.0.2
+  speech_to_text: ^5.4.3
 
 dev_dependencies:
   flutter_test:
