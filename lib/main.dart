@@ -4,7 +4,14 @@ import 'package:interview_bunny/screens/home.dart';
 import 'package:interview_bunny/screens/onboarding.dart';
 import 'package:interview_bunny/screens/practice.dart';
 
-void main() {
+import 'package:permission_handler/permission_handler.dart';
+import 'package:teachable/teachable.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Permission.camera.request();
+  await Permission.microphone.request();
   runApp(MaterialApp(
     initialRoute: '/',
     onGenerateRoute: (settings) {

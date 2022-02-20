@@ -1,5 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:teachable/teachable.dart';
 
 class Practice extends StatefulWidget {
   const Practice({Key? key}) : super(key: key);
@@ -9,6 +12,8 @@ class Practice extends StatefulWidget {
 }
 
 class _PracticeState extends State<Practice> {
+  String pose = "";
+  String posture = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +48,76 @@ class _PracticeState extends State<Practice> {
                   ),
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
-                      children: []),
+                      children: [
+                        Expanded(
+                          child: Container(
+                            child: Teachable(
+                              path: "pose/index.html",
+                              results: (res) {
+                                var resp = jsonDecode(res);
+                                print("The values are ${res}");
+
+                                setState(() {
+                                  if (resp['Perfect!'] * 100 < 80)
+                                    posture = "good";
+                                  pose = (resp['Perfect!'] * 100.0).toString();
+                                  // if (resp['Perfect!'] * 100 > 80) {
+                                  //   pose = 90;
+                                  // }
+                                  // if (resp['Hammer Strike'] * 100 < 50) {
+                                  //   pose = 50;
+                                  // }
+                                  // while (resp['Perfect!'] * 100 < 80) pose = "bad";
+                                });
+                              },
+                            ),
+                          ),
+                        ),
+                        Align(
+                          alignment: Alignment.bottomCenter,
+                          child: Container(
+                              width: double.infinity,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: Colors.black.withOpacity(0.5),
+                              ),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Text(
+                                        "Posture",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      Text(
+                                        "$pose",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                        ),
+                                      )
+                                      // Container(
+                                      //   child: pose > 80
+                                      //       ? Icon(
+                                      //           Icons.add,
+                                      //           color: Colors.white,
+                                      //         )
+                                      //       : Icon(
+                                      //           Icons.delete,
+                                      //           color: Colors.white,
+                                      //         ),
+                                      // ),
+                                    ],
+                                  ),
+                                ],
+                              )),
+                        ),
+                      ]),
                 ),
               ),
             ),
